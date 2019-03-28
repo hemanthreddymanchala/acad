@@ -3,6 +3,7 @@ package com.fm.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -55,10 +56,10 @@ public class SubmitForm extends HttpServlet {
 		Form fm=new Form(firstname, lastname, age, gender, contactnumber, city, state, userid, password);
 		FormDAO fmdao=new FormDAOImpl();
 		int status=fmdao.saveForm(fm);
-		javax.servlet.RequestDispatcher rd=request.getRequestDispatcher("Form.jsp");
+		RequestDispatcher rd=request.getRequestDispatcher("index.html");
 		if(status==1)
 		{
-			pw.println("<span style=color:green;font-size:20px;>Customer Added Successfully</span>");
+			pw.println("<span style=color:green;font-size:20px;>New user created Successfully</span>");
 			rd.include(request, response);
 		}
 		else

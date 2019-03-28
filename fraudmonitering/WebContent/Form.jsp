@@ -19,23 +19,23 @@
 			
 			<tr>
 			<td >First Name:</td>
-			<td><input type="text" name="firstname" id="firstname" value=""/><br><br></td>
+			<td><input type="text" name="firstname" id="firstname" value=""required  oninvalid="this.setCustomValidity('Enter First Name Here')" oninput="this.setCustomValidity('')"  /><br><br></td>
 			</tr>
 			
 			<tr>
 			<td>Last Name:</td>
-			<td><input type="text" name="lastname" id="lastname" value=""/><br><br></td>
+			<td><input type="text" name="lastname" id="lastname" value=""required oninvalid="this.setCustomValidity('Enter Last Name Here')" oninput="this.setCustomValidity('')" /><br><br></td>
 			</tr>
 			
 			<tr>
 			<td>Age:</td>
-			<td><input type="text" name="age" id="age" value=""/><br><br></td>
+			<td><input type="text" name="age" id="age" value=""required oninvalid="this.setCustomValidity('Enter Age Here')" oninput="this.setCustomValidity('')"/><br><br></td>
 			</tr>
 			
-			<tr>
+			<tr >
 			<td >Gender:</td>
-			<td ><select name="gender" style="width:230px">
-				<option value="none">Select your gender</option>
+			<td ><select name="gender" style="width:230px" >
+				<option value="none" >Select your gender</option>
 				<option value="Male">Male</option>
 				<option value="Female">Female</option>
 				</select><br><br></td>
@@ -48,26 +48,27 @@
 			
 			<tr>
 			<td>City:</td>
-			<td><input type="text" name="city" id="city" value=""/><br><br></td>
+			<td><input type="text" name="city" id="city" value=""required on invalid="this.setCustomValidity('Enter City Here')" oninput="this.setCustomValidity('')"/><br><br></td>
 			</tr>
 			
 			<tr>
 			<td>State:</td>
-			<td><input type="text" name="state" id="state" value=""/><br><br></td>
+			<td><input type="text" name="state" id="state" value=""required on invalid="this.setCustomValidity('Enter State Here')" oninput="this.setCustomValidity('')"/><br><br></td>
 			</tr>
 			
 			
 			<tr>
 			<td>User Id:</td>
-			<td><input type="text" name="userid" id="userid" value=""/><br><br></td>
+			<td><input type="text" name="userid" id="userid" value=""required on invalid="this.setCustomValidity('Enter User Id Here')" oninput="this.setCustomValidity('')"/><br><br></td>
 			</tr>
 			
 			
 			<tr>
 			<td>Password:</td>
-			<td><input type="password" name="password" id="password" value=""/><br><br></td>
+			<td><input type="password" name="password" id="password" value=""required on invalid="this.setCustomValidity('Enter Password Here')" oninput="this.setCustomValidity('')"/><br><br></td>
 			</tr>
 		</table>
+		
 		<button type="submit" form="form" value="Submit" ><p>Submit</p></button>
 		</fieldset>
 		</form>
